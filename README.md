@@ -34,15 +34,31 @@ cd ud-ci-bc-alg-ds
 cd exercises
 ```
 
+to run all tests
+
 ```sh
 npx jest
 ```
 
-OR
+to run a specific test file
+
+```sh
+npx jest path/to/test/file
+```
+> Example npx jest exercises/anagrams/test.js --watch
+
+OR to run all tests
 
 ```sh
 make test
 ```
+
+OR to run a specific test file
+
+```sh
+make test-file file=path/to/test/file
+```
+> Example make test-file file=exercises/anagrams/test.js
 
 <!-- 
 ## Contributing
