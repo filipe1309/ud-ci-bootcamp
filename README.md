@@ -30,6 +30,8 @@ cd ud-ci-bc-alg-ds
 
 ## :white_check_mark: Tests
 
+## With NPX
+
 ```sh
 cd exercises
 ```
@@ -40,14 +42,18 @@ to run all tests
 npx jest
 ```
 
-to run a specific test file
+OR to run a specific test file
 
 ```sh
 npx jest path/to/test/file
 ```
 > Example npx jest exercises/anagrams/test.js --watch
 
-OR to run all tests
+## With Makefile
+
+in root folder
+
+to run all tests
 
 ```sh
 make test
@@ -58,7 +64,7 @@ OR to run a specific test file
 ```sh
 make test-file file=path/to/test/file
 ```
-> Example make test-file file=exercises/anagrams/test.js
+> Example make test-file file=anagrams/test.js
 
 <!-- 
 ## Contributing

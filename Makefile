@@ -7,10 +7,10 @@ test:
 
 
 # run tests in a single file
-# example: make test-file file=exercise/01.test.js
+# example: make test-file file=anagram/test.js
 test-file:
-	@echo "🟢 Running tests for $(file) ..."
-	@cd exercises && npx jest $(file) --watch
+	@echo "🟢 Running tests for exercises/$(file) ..."
+	@cd exercises && npx jest exercises/$(file) --watch
 
 # run node
 run:
