@@ -7,7 +7,7 @@
 
 ## 💬 About
 
-This project was developed following Udemy's "[The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)" class.
+This project was developed following Udemy's "[The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)" classes.
 
 ## :computer: Technologies
 
