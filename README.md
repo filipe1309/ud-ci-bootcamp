@@ -1,9 +1,9 @@
 
 # <p align="center">UD The Coding Interview Bootcamp: Algorithms + Data Structures</p>
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Code-NodeJS-informational?style=flat-square&logo=node.js&color=339933" alt="NodeJS" />
-</p>
+![github action deploy badge](https://github.com/filipe1309/ud-ci-bc-alg-ds/actions/workflows/tests.yaml/badge.svg?event=push)
+<img src="https://img.shields.io/badge/Code-NodeJS-informational?style=flat-square&logo=node.js&color=339933" alt="NodeJS" />
+
 
 ## 💬 About
 
