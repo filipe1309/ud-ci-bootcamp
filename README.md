@@ -38,6 +38,12 @@ cd exercises
 npx jest
 ```
 
+OR
+
+```sh
+make test
+```
+
 <!-- 
 ## Contributing
 
