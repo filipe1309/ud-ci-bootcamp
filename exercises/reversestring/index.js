@@ -7,7 +7,7 @@
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-  return solution_3(str);
+  return mySolution(str);
 }
 
 function mySolution(str) {
@@ -31,6 +31,15 @@ function solution_2(str) {
 function solution_3(str) {
   // reduce((accumulator, currentValue))
   return str.split('').reduce((reversed, char) => char + reversed, '');
+}
+
+function solution_4(str) {
+  const arr = str.split('');
+  let result = '';
+  for (let i = arr.length-1; i >= 0; i--) {
+    result += arr[i]
+  }
+  return result
 }
 
 module.exports = reverse;
