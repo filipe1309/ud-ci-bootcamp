@@ -64,14 +64,14 @@ OR to run a specific test file
 ```sh
 make test e=EXERCISE_NAME
 ```
-> Example make test e=anagrams
+> Example: `make test e=anagrams`
 
 ## :bug: Debugging
 
 ```sh
 make debug e=EXERCISE_NAME
 ```
-> Example make debug e=anagrams
+> Example: `make debug e=anagrams`
 
 <!-- 
 ## Contributing
