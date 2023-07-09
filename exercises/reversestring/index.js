@@ -14,4 +14,8 @@ function mySolution(str) {
   return str.split('').reverse().join('');
 }
 
+function solution_1(str) {
+  return mySolution(str)
+}
+
 module.exports = reverse;
