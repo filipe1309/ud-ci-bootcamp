@@ -56,15 +56,15 @@ in root folder
 to run all tests
 
 ```sh
-make test
+make test-all
 ```
 
 OR to run a specific test file
 
 ```sh
-make test-file file=path/to/test/file
+make test e=EXERCISE_NAME
 ```
-> Example make test-file file=anagrams/test.js
+> Example make test e=anagrams
 
 <!-- 
 ## Contributing
