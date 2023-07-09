@@ -30,7 +30,7 @@ cd ud-ci-bc-alg-ds
 
 ## :white_check_mark: Tests
 
-## With NPX
+### With NPX
 
 ```sh
 cd exercises
@@ -49,7 +49,7 @@ npx jest path/to/test/file
 ```
 > Example npx jest exercises/anagrams/test.js --watch
 
-## With Makefile
+### With Makefile
 
 in root folder
 
@@ -65,6 +65,13 @@ OR to run a specific test file
 make test e=EXERCISE_NAME
 ```
 > Example make test e=anagrams
+
+## :bug: Debugging
+
+```sh
+make debug e=EXERCISE_NAME
+```
+> Example make debug e=anagrams
 
 <!-- 
 ## Contributing

@@ -16,3 +16,8 @@ test:
 run:
 	@echo "🏁 Running code..."
 
+# debug node
+# example: make debug e=anagram
+debug:
+	@echo "🏁 Debugging code..."
+	@node inspect exercises/$(e)/index.js
