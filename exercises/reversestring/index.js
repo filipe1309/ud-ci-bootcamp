@@ -15,7 +15,17 @@ function mySolution(str) {
 }
 
 function solution_1(str) {
-  return mySolution(str)
+  return mySolution(str);
+}
+
+function solution_2(str) {
+  let reversed = '';
+  for (let char of str) {
+    // insert each char in the begining of the empty string
+    reversed = char + reversed
+  }
+
+  return reversed;
 }
 
 module.exports = reverse;
