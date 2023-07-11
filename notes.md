@@ -55,3 +55,13 @@ Ctrl + C
 ```sh
 debug> quit
 ```
+
+```sh
+make test e=reversestring
+```
+
+## Section 4 - Palindromes
+
+```sh
+make test e=palindrome
+```
