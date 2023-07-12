@@ -8,7 +8,7 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-  return mySolution(str);
+  return mySolution2(str);
 }
 
 function mySolution(str) {
@@ -17,6 +17,15 @@ function mySolution(str) {
 
 function solution_1(str) {
   return mySolution(str);
+}
+
+function mySolution2(str) {
+  let lo = 0;
+  let hi = str.length - 1
+  while (lo < hi) {
+    if (str[lo++] !== str[hi--]) return false;
+  }
+  return true;
 }
 
 module.exports = palindrome;
