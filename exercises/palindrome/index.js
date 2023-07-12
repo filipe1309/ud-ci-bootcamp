@@ -8,7 +8,7 @@
 //   palindrome("abcdefg") === false
 
 function palindrome(str) {
-  return mySolution2(str);
+  return mySolution(str);
 }
 
 function mySolution(str) {
@@ -27,5 +27,11 @@ function mySolution2(str) {
   }
   return true;
 }
+
+function solution_2(str) {
+  return str.split('').every((char, i) => char === str[str.length - i - 1]);
+}
+
+// palindrome(" aba"); // for debugger
 
 module.exports = palindrome;
