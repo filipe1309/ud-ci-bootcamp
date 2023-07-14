@@ -17,11 +17,11 @@ function mySolution(str) {
   return str.split('').reverse().join('');
 }
 
-function solution_1(str) {
+function solution1(str) {
   return mySolution(str);
 }
 
-function solution_2(str) {
+function solution2(str) {
   let reversed = '';
   for (let char of str) {
     // insert each char in the begining of the empty string
@@ -32,12 +32,12 @@ function solution_2(str) {
   return reversed;
 }
 
-function solution_3(str) {
+function solution3(str) {
   // reduce((accumulator, currentValue))
   return str.split('').reduce((reversed, char) => char + reversed, '');
 }
 
-function solution_4(str) {
+function solution4(str) {
   const arr = str.split('');
   let result = '';
   for (let i = arr.length-1; i >= 0; i--) {
