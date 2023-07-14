@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "section-02",
-    "section-03"
+    "section-03",
+    "section-05"
   ]
 }

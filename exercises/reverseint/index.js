@@ -13,9 +13,8 @@ function reverseInt(n) {
 }
 
 function mySolution(n) {
-  const signal = Math.sign(n); // OR n < 0 ? -1 : 1;
-  let nStringReversed = (n * signal).toString().split('').reverse().join('')
-  return parseInt(nStringReversed) * signal;
+  let nStringReversed = n.toString().split('').reverse().join('')
+  return parseInt(nStringReversed) * Math.sign(n); // OR (n < 0 ? -1 : 1) intead o Math.sign
 }
 
 module.exports = reverseInt;
