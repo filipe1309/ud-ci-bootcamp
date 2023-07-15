@@ -10,22 +10,19 @@ function maxChar(str) {
 }
 
 function mySolution1(str) {
-  const obj = {};
-  let higherCount = 0;
-  let higherChar = '';
+  const charMap = {};
+  let maxCount = 0;
+  let maxChar = '';
 
-  for (const char of str) {
-    if (obj[char] == undefined) {
-      obj[char] = 0;
-    }
-    obj[char]++;
-    if (obj[char] >= higherCount) {
-      higherCount = obj[char];
-      higherChar = char;
+  for (let char of str) {
+    charMap[char] = charMap[char] ? charMap[char]++ : 1
+    if (charMap[char] >= maxCount) {
+      maxCount = charMap[char];
+      maxChar = char;
     }
   }
 
-  return higherChar;
+  return maxChar;
 }
 
 module.exports = maxChar;
