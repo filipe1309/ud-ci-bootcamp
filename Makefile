@@ -21,3 +21,11 @@ run:
 debug:
 	@echo "🏁 Debugging code..."
 	@node inspect exercises/$(e)/index.js
+
+help:
+	@echo "📖 Available commands:"
+	@echo "  make test-all"
+	@echo "  make test e=anagram"
+	@echo "  make run"
+	@echo "  make debug e=anagram"
+	@echo "  make help"
