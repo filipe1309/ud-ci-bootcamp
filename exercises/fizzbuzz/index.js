@@ -19,9 +19,24 @@ function fizzBuzz(n) {
 function mySolution(n) {
   for (let i = 1; i <= n; i++) {
     let result = "";
-    result = i % 3 == 0 ? "fizz": "";
-    result += i % 5 == 0 ? "buzz" : "";
-    console.log(result ? result : i)
+    result = i % 3 === 0 ? "fizz": "";
+    result += i % 5 === 0 ? "buzz" : "";
+    console.log(result ? result : i);
+  }
+}
+
+function solution1(n) {
+  for (let i = 1; i <= n; i++) {
+    // Is the number a multiple of 3 and 5?
+    if (i % 3 === 0 && i % 5 === 0) { // or i % 15 === 0
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i)
+    }
   }
 }
 
