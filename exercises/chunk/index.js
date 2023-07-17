@@ -9,7 +9,7 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-  return mySolution(array, size);
+  return solution1(array, size);
 }
 
 function mySolution(array, size) {
@@ -20,6 +20,21 @@ function mySolution(array, size) {
     result[newPos].push(array[pos]);
   }
   return result;
+}
+
+function solution1(array, size) {
+  const chunked = [];
+
+  for (let element of array) {
+    const last = chunked[chunked.length - 1];
+    if (!last || last.length === size) {
+      chunked.push([element]);
+    } else {
+      last.push(element)
+    }
+  }
+
+  return chunked;
 }
 
 module.exports = chunk;
