@@ -9,7 +9,7 @@
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
 function chunk(array, size) {
-  return solution1(array, size);
+  return mySolution(array, size);
 }
 
 function mySolution(array, size) {
@@ -36,5 +36,31 @@ function solution1(array, size) {
 
   return chunked;
 }
+
+function solution2(array, size) {
+  const chunked = [];
+  let index = 0;
+
+  while (index < array.length) {
+    const chunk = array.slice(index, index + size);
+    chunked.push(chunk);
+    index += size;
+  }
+
+  return chunked;
+}
+
+
+// function chunk(array, size) {
+//   const chunked = [];
+//   array.forEach((num, i) => {
+//     if(i % size === 0) {
+//       chunked.push([]);
+//     }
+//     chunked[chunked.length-1].push(num);
+//   })
+ 
+//   return chunked;
+// }
 
 module.exports = chunk;
