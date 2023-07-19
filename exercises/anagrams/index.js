@@ -13,27 +13,31 @@ function anagrams(stringA, stringB) {
 }
 
 function mySolution1(stringA, stringB) {
-  const stringACleaned = stringA.replace(/[^\w]/, "").toLowerCase();
-  const stringBCleaned = stringB.replace(/[^\w]/, "").toLowerCase();
+  const stringACleaned = cleanUpString(stringA);
+  const stringBCleaned = cleanUpString(stringB);
   if (stringACleaned.length !== stringBCleaned.length) return false;
 
-  const stringAMap = {}
-  const stringBMap = {}
-  for (const char of stringACleaned) {
-    if (!stringAMap[char]) stringAMap[char] = 0;
-    stringAMap[char]++;
-  }
+  const aCharMap = buildCharMap(stringACleaned)
+  const bCharMap = buildCharMap(stringBCleaned)
 
-  for (const char of stringBCleaned) {
-    if (!stringBMap[char]) stringBMap[char] = 0;
-    stringBMap[char]++;
-  }
-
-  for (const char in stringAMap) {
-    if (stringAMap[char] !== stringBMap[char]) return false;
+  for (const char in aCharMap) {
+    if (aCharMap[char] !== bCharMap[char]) return false;
   }
 
   return true;
+}
+
+function cleanUpString(str) {
+  return str.replace(/[^\w]/g, "").toLowerCase();
+}
+
+function buildCharMap(stringCleaned) {
+  const charMap = {}
+  for (const char of stringCleaned) {
+    charMap[char] = charMap[char] + 1 || 1;
+  }
+
+  return charMap;
 }
 
 module.exports = anagrams;
