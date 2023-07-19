@@ -40,4 +40,17 @@ function buildCharMap(stringCleaned) {
   return charMap;
 }
 
+function solution2(stringA, stringB) {
+  const stringACleaned = cleanUpString(stringA);
+  const stringBCleaned = cleanUpString(stringB);
+  const stringASorted = sortString(stringACleaned);
+  const stringBSorted = sortString(stringBCleaned);
+
+  return stringASorted === stringBSorted;
+}
+
+function sortString(str) {
+  return str.split("").sort().join("");
+}
+
 module.exports = anagrams;
