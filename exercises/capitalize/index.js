@@ -14,7 +14,7 @@ function capitalize(str) {
 function mySolution(str) {
   let arr = str.split(" ");
   arr = arr.map((value) => {
-      const firstCharCapital = String.fromCharCode(value.charCodeAt(0) - 32);
+      const firstCharCapital = value[0].toUpperCase(); //String.fromCharCode(value.charCodeAt(0) - 32);
       const restOfString = value.split("").slice(1).join("");
       return firstCharCapital + restOfString;
     }
