@@ -12,14 +12,14 @@ function capitalize(str) {
 }
 
 function mySolution(str) {
-  let arr = str.split(" ");
-  arr = arr.map((value) => {
-      const firstCharCapital = value[0].toUpperCase(); //String.fromCharCode(value.charCodeAt(0) - 32);
-      const restOfString = value.split("").slice(1).join("");
+  let wordsArr = str.split(" ");
+  wordsArr = wordsArr.map(word => {
+      const firstCharCapital = word[0].toUpperCase(); //String.fromCharCode(word.charCodeAt(0) - 32);
+      const restOfString = word.split("").slice(1).join("");
       return firstCharCapital + restOfString;
     }
   )
-  return arr.join(" ")
+  return wordsArr.join(" ");
 }
 
 module.exports = capitalize;
