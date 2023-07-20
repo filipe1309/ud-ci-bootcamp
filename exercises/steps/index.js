@@ -28,4 +28,20 @@ function mySolution(n) {
   }
 }
 
+function mySolution2(n) {
+  mySolution2Recursive(1, n);
+}
+
+function mySolution2Recursive(step, n) {
+  if (step > n) return;
+
+  let stepLine = "";
+  for (let i = 1; i <= n; i++) {
+    stepLine += (i <= step) ? "#" : " "
+  }
+
+  console.log(stepLine);
+  mySolution2Recursive(step+1, n);
+}
+
 module.exports = steps;
