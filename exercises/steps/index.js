@@ -44,4 +44,14 @@ function mySolution2Recursive(step, n) {
   mySolution2Recursive(step+1, n);
 }
 
+function solution1(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = "";
+    for (let col = 0; col < n; col++) {
+      stair += (col <= row) ? "#" : " ";
+    }
+    console.log(stair);
+  }
+}
+
 module.exports = steps;
