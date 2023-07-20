@@ -54,4 +54,10 @@ function solution1(n) {
   }
 }
 
+function solutionFromComments1(n) {
+  for(let i = 1; i <= n; i++) {
+    console.log("#".repeat(i) + " ".repeat(n-i));
+  }
+}
+
 module.exports = steps;
