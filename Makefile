@@ -1,5 +1,3 @@
-#! /bin/sh
-
 # run tests
 test-all:
 	@echo "🟢 Running tests..."

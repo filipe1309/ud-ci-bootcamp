@@ -17,6 +17,15 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+  mySolution(n);
+}
+
+function mySolution(n) {
+  for (let i = 1; i <= n; i++) {
+    const hashtags = new Array(i).fill("#");
+    console.log(hashtags.join("").padEnd(n," "));
+  }
+}
 
 module.exports = steps;
