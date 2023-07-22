@@ -18,7 +18,7 @@
 //       '####'
 
 function steps(n) {
-  mySolution2(n);
+  mySolution(n);
 }
 
 function mySolution(n) {
@@ -52,6 +52,18 @@ function solutionFromComments1(n) {
   for(let i = 1; i <= n; i++) {
     console.log("#".repeat(i) + " ".repeat(n-i));
   }
+}
+
+function solution2(n, row = 0, stair = '') {
+  if (n == row) return;
+
+  if (n === stair.length) {
+    console.log(stair);
+    return solution2(n, row + 1);
+  }
+
+  stair += (stair.length) <= row ? "#" : " ";
+  solution2(n, row, stair);
 }
 
 module.exports = steps;
