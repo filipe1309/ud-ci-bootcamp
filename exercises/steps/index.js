@@ -18,7 +18,7 @@
 //       '####'
 
 function steps(n) {
-  mySolution(n);
+  mySolution2(n);
 }
 
 function mySolution(n) {
@@ -34,13 +34,7 @@ function mySolution2(n) {
 
 function mySolution2Recursive(step, n) {
   if (step > n) return;
-
-  let stepLine = "";
-  for (let i = 1; i <= n; i++) {
-    stepLine += (i <= step) ? "#" : " "
-  }
-
-  console.log(stepLine);
+  console.log("#".repeat(step) + " ".repeat(n - step));
   mySolution2Recursive(step+1, n);
 }
 
