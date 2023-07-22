@@ -18,7 +18,7 @@
 //       '####'
 
 function steps(n) {
-  mySolution(n);
+  mySolution2(n);
 }
 
 function mySolution(n) {
@@ -28,14 +28,10 @@ function mySolution(n) {
   }
 }
 
-function mySolution2(n) {
-  mySolution2Recursive(1, n);
-}
-
-function mySolution2Recursive(step, n) {
+function mySolution2(n, step = 1) {
   if (step > n) return;
   console.log("#".repeat(step) + " ".repeat(n - step));
-  mySolution2Recursive(step+1, n);
+  mySolution2(n, step+1);
 }
 
 function solution1(n) {
