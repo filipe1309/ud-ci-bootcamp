@@ -37,4 +37,21 @@ function mySolution(n) {
   }
 }
 
+function solution1(n) {
+  const lineSize = n*2 - 1;
+  const midpoint = Math.floor(lineSize/2);
+
+  for (let row = 0; row < n; row++) {
+    let level = "";
+    for (let column = 0; column < lineSize; column++) {
+      if (midpoint - row <= column && midpoint + row >= column) {
+        level += "#";
+      } else {
+        level += " ";
+      }
+    }
+    console.log(level);
+  }
+}
+
 module.exports = pyramid;
