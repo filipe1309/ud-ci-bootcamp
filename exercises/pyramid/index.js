@@ -20,7 +20,7 @@
 //       '#######'
 
 function pyramid(n) {
-  mySolution(n)
+  solution2(n)
 }
 
 function mySolution(n) {
@@ -52,6 +52,25 @@ function solution1(n) {
     }
     console.log(level);
   }
+}
+
+function solution2(n, row = 0, level = "") {
+  if (row === n) return;
+  const lineSize = n*2 - 1;
+  if (level.length === lineSize) {
+    console.log(level);
+    return solution2(n, row + 1);
+  }
+
+  const midpoint = Math.floor(lineSize/2);
+  const column = level.length;
+  if (midpoint - row <= column && midpoint + row >= column) {
+    level += "#";
+  } else {
+    level += " ";
+  }
+
+  solution2(n, row, level);
 }
 
 module.exports = pyramid;
