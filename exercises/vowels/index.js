@@ -8,7 +8,7 @@
 //   vowels('Why?') --> 0
 
 function vowels(str) {
-  return mySolution1(str);
+  return solution2(str);
 }
 
 function mySolution1(str) {
@@ -23,6 +23,11 @@ function mySolution1(str) {
 
 function mySolution2(str) {
   return str.replace(/[^aeiou]/gi, '').length
+}
+
+function solution2(str) {
+  const matches = str.match(/[aeiou]/gi)
+  return matches ? matches.length : 0;
 }
 
 
