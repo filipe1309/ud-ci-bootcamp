@@ -21,5 +21,9 @@ function mySolution1(str) {
   return total;
 }
 
+function mySolution2(str) {
+  return str.replace(/[^aeiou]/gi, '').length
+}
+
 
 module.exports = vowels;
