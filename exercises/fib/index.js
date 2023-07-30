@@ -19,4 +19,21 @@ function mySolution1(n) {
   return mySolution1(n-1) + mySolution1(n-2);
 }
 
+function mySolution2(n) {
+  if (n <= 1) return n;
+
+  let sum = 0;
+  let last1 = 1;
+  let last2 = 0;
+  for (let i = 2; i <= n; i++) {
+    sum = last1 + last2;
+    last2 = last1;
+    last1 = sum;
+  }
+
+  return sum;
+}
+
+mySolution2(4)
+
 module.exports = fib;
