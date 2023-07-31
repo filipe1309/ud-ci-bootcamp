@@ -9,12 +9,11 @@
 //   fib(4) === 3
 
 function fib(n) {
-  return solution1(n);
+  return mySolution1(n);
 }
 
 function mySolution1(n) {
-  if (n === 0) return 0;
-  if (n === 1) return 1;
+  if (n < 2) return n;
 
   return mySolution1(n-1) + mySolution1(n-2);
 }
