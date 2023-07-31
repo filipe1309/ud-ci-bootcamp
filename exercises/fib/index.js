@@ -9,7 +9,7 @@
 //   fib(4) === 3
 
 function fib(n) {
-  return mySolution1(n);
+  return solution1(n);
 }
 
 function mySolution1(n) {
@@ -34,6 +34,14 @@ function mySolution2(n) {
   return sum;
 }
 
-mySolution2(4)
+// O(n)
+function solution1(n) {
+  const result = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    result.push(result[i-1] + result[i-2]);
+  }
+
+  return result[n];
+}
 
 module.exports = fib;
