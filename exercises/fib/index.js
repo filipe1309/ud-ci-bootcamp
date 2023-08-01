@@ -9,9 +9,10 @@
 //   fib(4) === 3
 
 function fib(n) {
-  return mySolution1(n);
+  return solution3(n);
 }
 
+// Slow Fib
 function mySolution1(n) {
   if (n < 2) return n;
 
@@ -41,6 +42,21 @@ function solution1(n) {
   }
 
   return result[n];
+}
+
+// Memoization
+function solution3(n) {
+  const fib = memoize(solution1);
+  return fib(n)
+}
+
+function memoize(fn) {
+  const cache = {};
+  return function(...args) {
+    if (cache[args]) return cache[args];
+    cache[args] = fn.apply(this, args);
+    return cache[args];
+  }
 }
 
 module.exports = fib;
