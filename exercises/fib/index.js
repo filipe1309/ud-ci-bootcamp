@@ -9,7 +9,7 @@
 //   fib(4) === 3
 
 function fib(n) {
-  return solution3(n);
+  return solution3Memoized(n);
 }
 
 // Slow Fib
@@ -45,10 +45,13 @@ function solution1(n) {
 }
 
 // Memoization
-function solution3(n) {
-  const fib = memoize(solution1);
-  return fib(n)
+function solution3Memoized(n) {
+  if (n < 2) return n;
+
+  return solution3Memoized(n-1) + solution3Memoized(n-2);
 }
+
+solution3Memoized = memoize(solution3Memoized)
 
 function memoize(fn) {
   const cache = {};
