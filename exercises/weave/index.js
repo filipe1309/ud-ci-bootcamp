@@ -29,11 +29,10 @@ function weave(sourceOne, sourceTwo) {
 }
 
 function mySolution1(sourceOne, sourceTwo) {
-  const q  =  new Queue();
-  let s1Peek, s2Peek;
-  while ((s1Peek = sourceOne.peek()) && (s2Peek = sourceTwo.peek())) {
-    if (s1Peek) q.add(sourceOne.remove());
-    if (s2Peek) q.add(sourceTwo.remove());
+  const q = new Queue();
+  while (sourceOne.peek() && sourceTwo.peek()) {
+    q.add(sourceOne.remove());
+    q.add(sourceTwo.remove());
   }
   return q;
 }
