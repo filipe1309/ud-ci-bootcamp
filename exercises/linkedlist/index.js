@@ -19,18 +19,27 @@ class LinkedList {
   }
 
   size() {
-    let element = this.head;
+    let node = this.head;
     let size = 0;
 
-    while (element) {
+    while (node) {
       size++;
-      element = element.next;
+      node = node.next;
     }
     return size;
   }
 
   getFirst() {
     return this.head;
+  }
+
+  getLast() {
+    let node = this.head;
+    while (node) {
+      if (!node.next) return node;
+      node = node.next;
+    }
+    return node;
   }
 }
 
