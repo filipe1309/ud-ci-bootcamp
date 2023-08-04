@@ -58,6 +58,11 @@ describe('GetLast', () => {
     l.insertFirst(1);
     expect(l.getLast()).toEqual({ data: 2, next: null });
   });
+
+  test('returns null from an empty list', () => {
+    const l = new List();
+    expect(l.getLast()).toEqual(null);
+  });
 });
 
 describe.skip('Clear', () => {
