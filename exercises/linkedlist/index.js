@@ -82,6 +82,22 @@ class LinkedList {
     }
     return null;
   }
+
+  removeAt(idx) {
+    if (!this.head) return;
+    if (idx === 0) this.removeFirst();
+
+    let prev = this.head;
+    let node = this.head.next;
+    let counter = 1;
+
+    while (node) {
+      if (counter === idx) { prev.next = node.next; return; }
+      prev = node;
+      node = node.next;
+      counter++;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
