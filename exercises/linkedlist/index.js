@@ -69,7 +69,18 @@ class LinkedList {
 
     let node = this.getLast();
     node.next = newNode;
+  }
 
+  getAt(idx) {
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      if (counter == idx) return node;
+      counter++;
+      node = node.next;
+    }
+    return null;
   }
 }
 
