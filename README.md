@@ -1,9 +1,10 @@
 
-# <p align="center">UD The Coding Interview Bootcamp: Algorithms + Data Structures</p>
+# <p align="center">The Coding Interview Bootcamp: Algorithms + Data Structures</p>
 
 ![github action deploy badge](https://github.com/filipe1309/ud-ci-bc-alg-ds/actions/workflows/tests.yaml/badge.svg?event=push)
+<img src="https://img.shields.io/badge/Code-JavaScript-informational?style=flat-square&logo=javascript&color=F7DF1E" alt="JavaScript" />
 <img src="https://img.shields.io/badge/Code-NodeJS-informational?style=flat-square&logo=node.js&color=339933" alt="NodeJS" />
-
+<img src="https://img.shields.io/badge/Code-Jest-informational?style=flat-square&logo=jest&color=C21325" alt="Jest" />
 
 ## 💬 About
 
@@ -30,6 +31,24 @@ cd ud-ci-bc-alg-ds
 
 ## :white_check_mark: Tests
 
+### With Makefile
+
+in root folder
+
+to run all tests
+
+```sh
+make test-all
+```
+
+OR to run a specific test file
+
+```sh
+make test e=EXERCISE_NAME
+```
+> Example: `make test e=anagrams`
+
+
 ### With NPX
 
 ```sh
@@ -48,23 +67,6 @@ OR to run a specific test file
 npx jest path/to/test/file
 ```
 > Example npx jest exercises/anagrams/test.js --watch
-
-### With Makefile
-
-in root folder
-
-to run all tests
-
-```sh
-make test-all
-```
-
-OR to run a specific test file
-
-```sh
-make test e=EXERCISE_NAME
-```
-> Example: `make test e=anagrams`
 
 ## :bug: Debugging
 
