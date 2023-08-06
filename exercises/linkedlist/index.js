@@ -100,6 +100,14 @@ class LinkedList {
     const node = new Node(data, prev.next);
     prev.next = node;
   }
+
+  forEach(callback) {
+    let node = this.head;
+    while (node) {
+      callback(node)
+      node = node.next
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
