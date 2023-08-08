@@ -7,6 +7,13 @@ test('fromLast is a function', () => {
   expect(typeof fromLast).toEqual('function');
 });
 
+
+test('fromLast returns the first node in a list with one lement', () => {
+  const l = new List();
+  l.insertLast('a');
+  expect(fromLast(l, 0).data).toEqual('a');
+});
+
 test('fromLast returns the node n elements from the end', () => {
   const l = new List();
 
@@ -17,4 +24,9 @@ test('fromLast returns the node n elements from the end', () => {
   l.insertLast('e');
 
   expect(fromLast(l, 3).data).toEqual('b');
+  expect(fromLast(l, 4).data).toEqual('a');
+  expect(fromLast(l, 2).data).toEqual('c');
+  expect(fromLast(l, 1).data).toEqual('d');
+  expect(fromLast(l, 0).data).toEqual('e');
 });
+
