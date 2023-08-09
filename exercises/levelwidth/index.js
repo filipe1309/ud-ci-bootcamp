@@ -16,7 +16,7 @@ function levelWidth(root) {
   let children = root.children;
   let arr = [];
 
-  do {
+  while (children.length) {
     arr = [];
     let levelCounter = 0;
     for (let i = 0; i < children.length; i++) {
@@ -25,7 +25,7 @@ function levelWidth(root) {
     }
     children = arr;
     result.push(levelCounter);
-  } while (arr.length);
+  }
 
   return result;
 }
