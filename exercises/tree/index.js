@@ -31,15 +31,22 @@ class Tree {
   }
 
   traverseBF(fn) {
-    let childrens = [this.root];
-    while (childrens.length) {
-      const node = childrens.shift();
-      childrens.push(...node.children)
+    let children = [this.root];
+    while (children.length) {
+      const node = children.shift();
+      children.push(...node.children)
       fn(node);
     }
   }
 
-  traverseDF() {}
+  traverseDF(fn) {
+    let children = [this.root];
+    while (children.length) {
+      const node = children.shift();
+      children.unshift(...node.children)
+      fn(node);
+    }
+  }
 }
 
 module.exports = { Tree, Node };
