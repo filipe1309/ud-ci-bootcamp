@@ -43,7 +43,7 @@ class Tree {
     let children = [this.root];
     while (children.length) {
       const node = children.shift();
-      children.unshift(...node.children)
+      children.unshift(...node.children);
       fn(node);
     }
   }
