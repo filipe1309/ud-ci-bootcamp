@@ -12,6 +12,10 @@
 // Answer: [1, 3, 2]
 
 function levelWidth(root) {
+  return solution(root);
+}
+
+function mySolution(root) {
   let result = [1];
   let children = root.children;
   let arr = [];
@@ -28,6 +32,24 @@ function levelWidth(root) {
   }
 
   return result;
+}
+
+function solution(root) {
+  const stop = 'STOP';
+  let arr = [root, stop];
+  let counters = [0];
+  while (arr.length > 1) {
+    const node = arr.shift();
+    if (node === stop) {
+      counters.push(0);
+      arr.push(stop);
+    } else {
+      counters[counters.length - 1]++;
+      arr.push(...node.children);
+    }
+  }
+
+  return counters;
 }
 
 module.exports = levelWidth;
