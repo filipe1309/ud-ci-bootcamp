@@ -49,10 +49,21 @@ class Node {
   }
 
   contains(data) {
+    return this.containsRecursiveSolution(data);
+  }
+
+  containsRecursiveSolution(data) {
+    if (this.data === data) return this;
+    if (data < this.data && this.left) return this.left.containsRecursiveSolution(data);
+    if (data > this.data && this.right) return this.right.containsRecursiveSolution(data);
+    return null;
+  }
+
+  mySolutionContainsIterative(data) {
     let currNode = this;
     while (currNode) {
       if (currNode.data === data) return currNode;
-      if (data <= currNode.data) { currNode = currNode.left; }
+      if (data < currNode.data) { currNode = currNode.left; }
       if (data > currNode.data) { currNode = currNode.right; }
     }
 
