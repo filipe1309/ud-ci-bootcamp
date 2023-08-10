@@ -12,10 +12,10 @@
 // and return the Node in the tree with the same value.
 
 class Node {
-  constructor(data, left, right) {
+  constructor(data) {
     this.data = data;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 
   insert(data) {
