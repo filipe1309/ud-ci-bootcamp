@@ -23,11 +23,11 @@ class Node {
     const node = new Node(data);
     while (currNode) {
       if (data <= currNode.data) {
-        if (currNode.left === undefined) {currNode.left = node; return;}
+        if (currNode.left === null) {currNode.left = node; return;}
         currNode = currNode.left;
       }
       if (data > currNode.data) {
-        if (currNode.right === undefined) {currNode.right = node; return;}
+        if (currNode.right === null) {currNode.right = node; return;}
         currNode = currNode.right;
       }
     }
