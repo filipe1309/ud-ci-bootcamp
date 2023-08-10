@@ -19,6 +19,21 @@ class Node {
   }
 
   insert(data) {
+    this.insertRecursiveSolution(data);
+  }
+
+  insertRecursiveSolution(data) {
+    if (data <= this.data) {
+      if (this.left) this.left.insertRecursiveSolution(data);
+      else this.left = new Node(data);
+    }
+    if (data > this.data) {
+      if (this.right) this.right.insertRecursiveSolution(data);
+      else this.right = new Node(data);
+    }
+  }
+
+  mySolutionInsertInterative(data) {
     let currNode = this;
     const node = new Node(data);
     while (currNode) {
