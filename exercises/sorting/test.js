@@ -4,23 +4,33 @@ const selectionSort = S.selectionSort;
 const mergeSort = S.mergeSort;
 const merge = S.merge;
 
-function getArray() {
+function getArrayOddSize() {
   return [100, -40, 500, -124, 0, 21, 7];
 }
 
-function getSortedArray() {
+function getArrayEvenSize() {
+  return [100, -40, 500, -124, 0, 21];
+}
+
+function getSortedArrayOddSize() {
   return [-124, -40, 0, 7, 21, 100, 500];
+}
+
+function getSortedArrayEvenSize() {
+  return [-124, -40, 0, 21, 100, 500];
 }
 
 describe('Bubble sort', () => {
   test('sorts an array', () => {
-    expect(bubbleSort(getArray())).toEqual(getSortedArray());
+    expect(bubbleSort(getArrayOddSize())).toEqual(getSortedArrayOddSize());
+    expect(bubbleSort(getArrayEvenSize())).toEqual(getSortedArrayEvenSize());
   });
 });
 
 describe('Selection sort', () => {
   test('sorts an array', () => {
-    expect(selectionSort(getArray())).toEqual(getSortedArray());
+    expect(selectionSort(getArrayOddSize())).toEqual(getSortedArrayOddSize());
+    expect(selectionSort(getArrayEvenSize())).toEqual(getSortedArrayEvenSize());
   });
 });
 
@@ -33,6 +43,7 @@ describe('Merge sort', () => {
   });
   
   test('sorts an array', () => {
-    expect(mergeSort(getArray())).toEqual(getSortedArray());
+    expect(mergeSort(getArrayOddSize())).toEqual(getSortedArrayOddSize());
+    expect(mergeSort(getArrayEvenSize())).toEqual(getSortedArrayEvenSize());
   });
 });

@@ -30,18 +30,24 @@ function selectionSort(arr) {
 }
 
 function mergeSort(arr) {
+  if (arr.length === 1) return arr;
 
+  const middle = Math.floor(arr.length / 2);
+  const leftSorted = mergeSort(arr.slice(0, middle))
+  const rightSorted = mergeSort(arr.slice(middle))
+
+  return merge(leftSorted, rightSorted);
 }
 
-function merge(left, right) {
+function merge(leftSorted, rightSorted) {
   let sortedArray = [];
 
-  while (left.length && right.length) {
-    if (left[0] < right[0]) sortedArray.push(left.shift());
-    else sortedArray.push(right.shift());
+  while (leftSorted.length && rightSorted.length) {
+    if (leftSorted[0] < rightSorted[0]) sortedArray.push(leftSorted.shift());
+    else sortedArray.push(rightSorted.shift());
   }
 
-  return [...sortedArray, ...left, ...right];
+  return [...sortedArray, ...leftSorted, ...rightSorted];
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
