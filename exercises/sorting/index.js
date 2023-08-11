@@ -34,7 +34,14 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
+  let sortedArray = [];
 
+  while (left.length && right.length) {
+    if (left[0] < right[0]) sortedArray.push(left.shift());
+    else sortedArray.push(right.shift());
+  }
+
+  return [...sortedArray, ...left, ...right];
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
